@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Яндекс Музыка iOS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff2c2c">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎵</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Top Bar -->
+        <div class="top-bar glass-effect">
+            <div class="top-bar-left">
+                <button class="icon-btn" id="menu-btn"><i class="fas fa-bars"></i></button>
+                <span class="logo">Яндекс Музыка</span>
+            </div>
+            <div class="top-bar-right">
+                <button class="icon-btn" id="search-btn"><i class="fas fa-search"></i></button>
+                <button class="icon-btn" id="user-btn"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar glass-effect" id="sidebar">
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span>Главная</span>
+                </a>
+                <a href="#" class="nav-item" data-section="library">
+                    <i class="fas fa-compass"></i>
+                    <span>Медиатека</span>
+                </a>
+                <a href="#" class="nav-item" data-section="playlists">
+                    <i class="fas fa-music"></i>
+                    <span>Плейлисты</span>
+                </a>
+                <a href="#" class="nav-item" data-section="radio">
+                    <i class="fas fa-radio"></i>
+                    <span>Радио</span>
+                </a>
+                <a href="#" class="nav-item" data-section="favorites">
+                    <i class="fas fa-heart"></i>
+                    <span>Любимое</span>
+                </a>
+                <a href="#" class="nav-item" data-section="history">
+                    <i class="fas fa-history"></i>
+                    <span>История</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-card glass-effect">
+                    <h2 id="greeting">Доброе утро</h2>
+                    <p>Ваши персональные рекомендации</p>
+                </div>
+            </div>
+
+            <!-- Playlists -->
+            <section class="section">
+                <h3>Плейлисты дня</h3>
+                <div class="playlist-grid">
+                    <div class="playlist-card glass-effect" data-playlist="chill">
+                        <div class="playlist-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <h4>Чиллин</h4>
+                        <p>Спокойная музыка</p>
+                    </div>
+                    <div class="playlist-card glass-effect" data-playlist="rock">
+                        <div class="playlist-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <i class="fas fa-guitar"></i>
+                        </div>
+                        <h4>Рок хиты</h4>
+                        <p>Энергичные треки</p>
+                    </div>
+                    <div class="playlist-card glass-effect" data-playlist="electronic">
+                        <div class="playlist-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Электроника</h4>
+                        <p>Танцевальные биты</p>
+                    </div>
+                    <div class="playlist-card glass-effect" data-playlist="classical">
+                        <div class="playlist-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h4>Классика</h4>
+                        <p>Вечная музыка</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- All Tracks -->
+            <section class="section">
+                <div class="section-header">
+                    <h3>Все треки</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="chill">Чиллин</button>
+                        <button class="filter-btn" data-filter="rock">Рок</button>
+                        <button class="filter-btn" data-filter="electronic">Электро</button>
+                    </div>
+                </div>
+                
+                <div class="track-list" id="track-list">
+                    <!-- Треки будут загружены через JavaScript -->
+                </div>
+            </section>
+
+            <!-- Radio Stations -->
+            <section class="section" id="radio-section">
+                <h3>Радиостанции</h3>
+                <div class="radio-grid">
+                    <div class="radio-card glass-effect" data-radio="chill">
+                        <div class="radio-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div>
+                            <h4>Chill Radio</h4>
+                            <p>Спокойная музыка 24/7</p>
+                        </div>
+                    </div>
+                    <div class="radio-card glass-effect" data-radio="rock">
+                        <div class="radio-icon">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                        <div>
+                            <h4>Rock Radio</h4>
+                            <p>Лучшие рок хиты</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Player -->
+        <div class="player glass-effect" id="player">
+            <div class="player-info">
+                <div class="now-playing-cover" id="current-cover" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <i class="fas fa-music"></i>
+                </div>
+                <div class="track-info">
+                    <h4 id="current-title">Выберите трек</h4>
+                    <p id="current-artist">—</p>
+                </div>
+                <button class="icon-btn" id="like-btn">
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
+            
+            <div class="player-controls">
+                <button class="control-btn" id="prev-btn">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="play-btn" id="play-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="control-btn" id="next-btn">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+
+            <div class="player-progress">
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="time-display">
+                    <span id="current-time">0:00</span>
+                    <span id="total-time">0:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audio Element -->
+        <audio id="audio-player" preload="metadata"></audio>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
