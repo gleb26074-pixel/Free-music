@@ -1,0 +1,47 @@
+{
+  "name": "Яндекс Музыка iOS",
+  "short_name": "YMusic iOS",
+  "description": "Музыкальное приложение с эффектом прозрачности iOS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f23",
+  "theme_color": "#ff2c2c",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23ff2c2c'/><path d='M30,35 L70,35 L70,45 L30,45 Z M30,55 L70,55 L70,65 L30,65 Z' fill='white'/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23ff2c2c'/><path d='M35,40 L65,40 L65,50 L35,50 Z M35,60 L65,60 L65,70 L35,70 Z' fill='white'/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["music", "entertainment"],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Слушать сейчас",
+      "short_name": "Слушать",
+      "description": "Продолжить прослушивание",
+      "url": "/?play",
+      "icons": [{
+        "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><circle cx='24' cy='24' r='22' fill='%23ff2c2c'/><polygon points='18,14 34,24 18,34' fill='white'/></svg>",
+        "sizes": "96x96"
+      }]
+    },
+    {
+      "name": "Любимые треки",
+      "short_name": "Любимое",
+      "description": "Ваши любимые треки",
+      "url": "/?favorites",
+      "icons": [{
+        "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><path d='M24,42.7l-2.9-2.6C12.6,32.1,6,26.3,6,19c0-5.5,4.5-10,10-10c3.3,0,6.5,1.6,8,4.1c1.5-2.5,4.7-4.1,8-4.1c5.5,0,10,4.5,10,10c0,7.3-6.6,13.1-15.1,21.1L24,42.7z' fill='%23ff2c2c'/></svg>",
+        "sizes": "96x96"
+      }]
+    }
+  ]
+}
