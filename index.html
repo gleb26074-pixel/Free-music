@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yandex Music iOS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff2c2c">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎵</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Top Bar -->
+        <div class="top-bar glass-effect">
+            <div class="top-bar-left">
+                <button class="icon-btn"><i class="fas fa-bars"></i></button>
+                <span class="logo">Яндекс Музыка</span>
+            </div>
+            <div class="top-bar-right">
+                <button class="icon-btn"><i class="fas fa-search"></i></button>
+                <button class="icon-btn"><i class="fas fa-user"></i></button>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar glass-effect">
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Главная</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-compass"></i>
+                    <span>Медиатека</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-music"></i>
+                    <span>Плейлисты</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-radio"></i>
+                    <span>Радио</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Любимое</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-history"></i>
+                    <span>История</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-card glass-effect">
+                    <h2>Доброе утро</h2>
+                    <p>Ваши персональные рекомендации</p>
+                </div>
+            </div>
+
+            <!-- Playlists -->
+            <section class="section">
+                <h3>Плейлисты дня</h3>
+                <div class="playlist-grid">
+                    <div class="playlist-card glass-effect">
+                        <div class="playlist-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h4>Дежавю</h4>
+                        <p>Треки, которые вы слушали</p>
+                    </div>
+                    <div class="playlist-card glass-effect">
+                        <div class="playlist-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h4>Премьера</h4>
+                        <p>Новые треки</p>
+                    </div>
+                    <div class="playlist-card glass-effect">
+                        <div class="playlist-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h4>Плейлист №1</h4>
+                        <p>Слушайте сейчас</p>
+                    </div>
+                    <div class="playlist-card glass-effect">
+                        <div class="playlist-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Топ-100</h4>
+                        <p>Популярные треки</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tracks -->
+            <section class="section">
+                <h3>Сейчас играет</h3>
+                <div class="track-list">
+                    <div class="track-item glass-effect">
+                        <div class="track-info">
+                            <div class="track-avatar" style="background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);"></div>
+                            <div>
+                                <h4>Трек 1</h4>
+                                <p>Исполнитель 1</p>
+                            </div>
+                        </div>
+                        <div class="track-time">3:45</div>
+                    </div>
+                    <div class="track-item glass-effect">
+                        <div class="track-info">
+                            <div class="track-avatar" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);"></div>
+                            <div>
+                                <h4>Трек 2</h4>
+                                <p>Исполнитель 2</p>
+                            </div>
+                        </div>
+                        <div class="track-time">4:20</div>
+                    </div>
+                    <div class="track-item glass-effect">
+                        <div class="track-info">
+                            <div class="track-avatar" style="background: linear-gradient(135deg, #fdcbf1 0%, #e6dee9 100%);"></div>
+                            <div>
+                                <h4>Трек 3</h4>
+                                <p>Исполнитель 3</p>
+                            </div>
+                        </div>
+                        <div class="track-time">3:15</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Player -->
+        <div class="player glass-effect">
+            <div class="player-info">
+                <div class="now-playing-cover" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                <div>
+                    <h4>Текущий трек</h4>
+                    <p>Исполнитель</p>
+                </div>
+                <button class="icon-btn"><i class="far fa-heart"></i></button>
+            </div>
+            
+            <div class="player-controls">
+                <button class="control-btn"><i class="fas fa-step-backward"></i></button>
+                <button class="play-btn"><i class="fas fa-play"></i></button>
+                <button class="control-btn"><i class="fas fa-step-forward"></i></button>
+            </div>
+
+            <div class="player-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="time-display">
+                    <span>1:30</span>
+                    <span>3:45</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
